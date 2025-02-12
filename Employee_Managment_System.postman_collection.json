@@ -1,0 +1,378 @@
+{
+	"info": {
+		"_postman_id": "f812496d-5e75-497d-b54e-0a335888e40b",
+		"name": "Employee_Managment_System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31208816"
+	},
+	"item": [
+		{
+			"name": "Add all employees",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"name\": \"name1\",\r\n        \"email\": \"name1@example.com\",\r\n        \"role\": \"role1\",\r\n        \"department\": \"department1\",\r\n        \"employer\": {\r\n            \"id\": 1\r\n        },\r\n        \"skillSets\": [\r\n            {\r\n                \"id\": 1,\r\n                \"skillName\": \"skill1\"\r\n            },\r\n            {\r\n                \"id\": 2,\r\n                \"skillName\": \"skill2\"\r\n            }\r\n        ],\r\n        \"projects\": [\r\n            {\r\n                \"id\": 1,\r\n                \"projectName\": \"project1\",\r\n                \"description\": \"description1\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"name\": \"name2\",\r\n        \"email\": \"name2@example.com\",\r\n        \"role\": \"role2\",\r\n        \"department\": \"department2\",\r\n        \"employer\": {\r\n            \"id\": 1\r\n        },\r\n        \"skillSets\": [\r\n            {\r\n                \"id\": 3,\r\n                \"skillName\": \"skill1\"\r\n            },\r\n            {\r\n                \"id\": 4,\r\n                \"skillName\": \"skill2\"\r\n            }\r\n        ],\r\n        \"projects\": [\r\n            {\r\n                \"id\": 2,\r\n                \"projectName\": \"project2\",\r\n                \"description\": \"description2\"\r\n            }\r\n        ]\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8100/api/employees/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"employees",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all employees",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get an employee with 'id'",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8100/api/employees/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"employees",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add all employers",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"name\": \"employer1\",\r\n    \"email\": \"employer1@example.com\",\r\n    \"companyName\": \"company1\"\r\n  },\r\n  {\r\n    \"name\": \"employer2\",\r\n    \"email\": \"employer2@example.com\",\r\n    \"companyName\": \"company2\"\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8100/api/employers/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"employers",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all employers",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8100/api/employers/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"employers",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add all projects",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"projectName\": \"project1\",\r\n    \"description\": \"description1\"\r\n  },\r\n  {\r\n    \"projectName\": \"project2\",\r\n    \"description\": \"description2\"\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8100/api/projects/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"projects",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all projects",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8100/api/projects/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"projects",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add all skillSets",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"skillName\": \"skill1\"\r\n  },\r\n  {\r\n    \"skillName\": \"skill2\"\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8100/api/skillsets/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"skillsets",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all SkillSets",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8100/api/skillsets/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"skillsets",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an employee",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8100/api/employees/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"employees",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update an employee with 'id'",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"john.doe@example.com\",\r\n  \"department\": \"Engineering\",\r\n  \"skills\": [\r\n    {\r\n      \"id\": 101,\r\n      \"name\": \"Java\"\r\n    },\r\n    {\r\n      \"id\": 102,\r\n      \"name\": \"Spring Boot\"\r\n    }\r\n  ],\r\n  \"projects\": [\r\n    {\r\n      \"id\": 201,\r\n      \"name\": \"Project A\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8100/api/employees/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"employees",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a skill to an employee with 'id'",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8100/api/employees/2/skills/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"employees",
+						"2",
+						"skills",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove a skill from employee with 'id'",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8100/api/employees/2/skills/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"employees",
+						"2",
+						"skills",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign the employee to new project",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8100/api/employees/2/projects/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"employees",
+						"2",
+						"projects",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
